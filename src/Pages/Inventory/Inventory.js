@@ -5,6 +5,9 @@ const Inventory = () => {
     return (
         <div className='my-4'>
             <h1 className='text-4xl font-bold mb-4'>Inventory Items</h1>
+            <div>
+                
+            </div>
             <Item></Item>
         </div>
     );
