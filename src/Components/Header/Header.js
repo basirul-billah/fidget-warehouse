@@ -1,7 +1,16 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Header = () => {
+    const [user] = useAuthState(auth);
+
+    const logout = () => {
+        signOut(auth);
+    }
+    
     return (
         <div>
             <nav className="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#15263F] mb-3">
@@ -29,9 +38,15 @@ const Header = () => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to="/login">
-                                    Log in
-                                </Link>
+                                {
+                                    user 
+                                    ? 
+                                    <button onClick={logout} className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to='/'>Log out</button> 
+                                    : 
+                                    <Link className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" to="/login">
+                                        Log in
+                                    </Link>
+                                }
                             </li>
                         </ul>
                     </div>

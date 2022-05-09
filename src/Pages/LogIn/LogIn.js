@@ -1,17 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const LogIn = () => {
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [signInWithEmailAndPassword, user] = useSignInWithEmailAndPassword(auth);
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/home';
+
+    const onEmailBlur = e => {
+        setEmail(e.target.value);
+    }
+
+    const onPasswordBlur = e => {
+        setPassword(e.target.value);
+    }
+
+    const handleLogin = e => {
+        e.preventDefault();
+        signInWithEmailAndPassword(email, password);
+    }
+
+    if (user) {
+        navigate(from, {replace: true});
+    }
+    else {
+        setError('User not found! Please register before logging in.');
+    }
+
     return (
         <div className='card bg-[#15263F] w-2/5 h-[32rem] rounded-xl p-6 mx-auto'>
             <h1 className='text-4xl font-bold my-4 text-white'>Log in</h1>
 
             {/* sign in form */}
-            <form>
-                <input className='my-3 p-3 w-full rounded-md bg-white' type="email" name="email" id="email" placeholder='Email' />
-                <input className='my-3 p-3 w-full rounded-md bg-white' type="password" name="password" id="password" placeholder='Password' />
-                <input className='my-3 p-3 w-full rounded-md bg-blue-500' type="button" value="LOG IN" />
+            <form onSubmit={handleLogin}>
+                <input onBlur={onEmailBlur} className='my-3 p-3 w-full rounded-md bg-white' type="email" name="email" id="email" placeholder='Email' />
+                <input onBlur={onPasswordBlur} className='my-3 p-3 w-full rounded-md bg-white' type="password" name="password" id="password" placeholder='Password' />
+                <button className='my-3 p-3 w-full rounded-md bg-blue-500' type="submit">Log in</button>
             </form>
+            <p className='text-red-900'>{error}</p>
             <p className='text-white my-3'>Forgot password? <a className='text-red-900' href="/">Reset Password</a></p>
+            <p className='text-white my-3'>Don't have an account? <Link className='text-red-900' to='/register'>Register now!</Link></p>
 
             <div className="flex items-center py-3">
                 <hr className="w-full border border-gray-300" />
