@@ -2,6 +2,7 @@ import { async } from '@firebase/util';
 import React, { useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import SocialAuth from '../../Components/SocialAuth/SocialAuth';
 import auth from '../../firebase.init';
 
 const LogIn = () => {
@@ -37,7 +38,7 @@ const LogIn = () => {
     }
 
     return (
-        <div className='card bg-[#15263F] w-2/5 h-[32rem] rounded-xl p-6 mx-auto'>
+        <div className='card bg-[#15263F] w-2/5 h-[36rem] rounded-xl p-6 mb-10 mx-auto'>
             <h1 className='text-4xl font-bold my-4 text-white'>Log in</h1>
 
             {/* sign in form */}
@@ -58,12 +59,7 @@ const LogIn = () => {
             </div>
 
             {/* sign in using social */}
-            <div className="grid grid-cols-1 gap-4 py-3">
-                <a
-                    href="/"
-                    className="text-center rounded-md border-b-2 border-b-gray-300 bg-white py-2.5 px-4 font-bold text-blue-500 ring-2 ring-gray-300 hover:bg-gray-200 active:translate-y-[0.125rem] active:border-b-gray-200"
-                >Log in with GOOGLE</a>
-            </div>
+            <SocialAuth></SocialAuth>
 
         </div>
     );
