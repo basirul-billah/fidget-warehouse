@@ -6,6 +6,7 @@ import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home';
 import Inventory from './Pages/Inventory/Inventory';
 import LogIn from './Pages/LogIn/LogIn';
+import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
