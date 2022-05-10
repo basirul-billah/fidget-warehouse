@@ -27,13 +27,14 @@ const Register = () => {
 
     // creates account with email and password 
     const handleRegistration = e => {
+        e.preventDefault();
 
         if (password.length < 6) {
             setError('Passwords need to at least 6 character or longer.');
             return;
         }
         if (password !== confirmPassword) {
-            setError('Passwords does not match');
+            setError('Passwords does not match.');
             return;
         }
         createUserWithEmailAndPassword(email, password);
