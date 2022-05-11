@@ -1,16 +1,20 @@
 import React from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import product from '../../images/product.jpg'
 
 const Item = ({ product }) => {
 
-    const { name, img, description, price, quantity, supplier } = product;
+    const { _id, name, img, description, price, quantity, supplier } = product;
+    const navigate = useNavigate();
+    const navigateToItemDetails = id => {
+        navigate(`/itemdetails/${id}`);
+    }
 
     return (
         <div className='m-2'>
             <div className="card bg-[#15263F] w-80 h-[32rem] rounded-xl p-6 space-y-4">
                 <img className="w-full h-64 rounded-md transition hover:bg-cyan-300"
-                    src={img} alt=""/>
+                    src={img} alt="" />
                 <div id="description" className="space-y-4">
                     <h2 className="text-white font-semibold text-xl transition hover:text-cyan-300">
                         {name}
@@ -26,9 +30,7 @@ const Item = ({ product }) => {
                     </div>
                     <div className="flex text-slate-500 text-sm justify-between items-center">
                         <span>Supplier: {supplier}</span>
-                        <Link to="/itemdetails/:id">
-                            <button className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Update Stock</button>
-                        </Link>
+                        <button onClick={() => navigateToItemDetails(_id)} className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Update Stock</button>
                     </div>
                 </div>
             </div>
