@@ -15,7 +15,7 @@ const Home = () => {
             <h1 className='text-3xl font-bold my-4 text-center'>Inventory Items</h1>
             <div className='flex flex-row flex-wrap justify-center'>
                 {
-                    products.map(product => <Item
+                    products.slice(0, 6).map(product => <Item
                         key={product._id}
                         product={product}
                     ></Item>)

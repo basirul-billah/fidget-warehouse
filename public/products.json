@@ -52,5 +52,32 @@
         "quantity" : "1",
         "price": "60",
         "supplier": "FireFidget"
+    },
+    {
+        "_id": 7,
+        "name": "Fire Fidget",
+        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
+        "description": "The color of some product parts may vary from what is shown in the image",
+        "quantity" : "1",
+        "price": "60",
+        "supplier": "FireFidget"
+    },
+    {
+        "_id": 8,
+        "name": "Fire Fidget",
+        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
+        "description": "The color of some product parts may vary from what is shown in the image",
+        "quantity" : "1",
+        "price": "60",
+        "supplier": "FireFidget"
+    },
+    {
+        "_id": 9,
+        "name": "Fire Fidget",
+        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
+        "description": "The color of some product parts may vary from what is shown in the image",
+        "quantity" : "1",
+        "price": "60",
+        "supplier": "FireFidget"
     }
 ]
