@@ -5,7 +5,7 @@ const InventoryItems = ({ product }) => {
 
     const handleDeliverd = () => {
         let quantityObj = JSON.parse(quantity);
-        if(quantityObj >= 0) {
+        if (quantityObj >= 0) {
             quantityObj--;
         }
         quantity = JSON.stringify(quantityObj)
@@ -23,11 +23,13 @@ const InventoryItems = ({ product }) => {
                 <button
                     onClick={handleDeliverd}
                     className='py-2 px-4 mr-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
-
                     Delivered
                 </button>
 
-                <button className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>Restock</button>
+                <button
+                    className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
+                    Restock
+                </button>
             </td>
         </tr>
     );
