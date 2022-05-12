@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
-import product from '../../images/product.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const Item = ({ product }) => {
 
     const { _id, name, img, description, price, quantity, supplier } = product;
     const navigate = useNavigate();
+
     const navigateToItemDetails = id => {
         navigate(`/itemdetails/${id}`);
     }
@@ -16,7 +16,7 @@ const Item = ({ product }) => {
                 <img className="w-full h-64 rounded-md transition hover:bg-cyan-300"
                     src={img} alt="" />
                 <div id="description" className="space-y-4">
-                    <h2 className="text-white font-semibold text-xl transition hover:text-cyan-300">
+                    <h2 className="text-white font-semibold text-xl transition">
                         {name}
                     </h2>
                     <p className="text-slate-500 text-sm select-none">{description}</p>

@@ -10,74 +10,74 @@
     },
     {
         "_id": 2,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Water Fidget",
+        "img": "https://rukminim1.flixcart.com/image/416/416/kmax8y80/spin-press-launch-toy/a/o/l/four-bearing-water-transfer-printed-fidget-spinner-blue-premsons-original-imagf8h4unhpfz4h.jpeg?q=70",
+        "description": "An incredibly cool pass-time accessory and a lovely play toy for your kids.",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "50",
+        "supplier": "WaterFidget"
     },
     {
         "_id": 3,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Air Fidget",
+        "img": "https://cdn.shopify.com/s/files/1/0720/2413/products/CAP1009A_1024x1024.jpg?v=1505942411",
+        "description": "Air fidget! A fidget that has nothing to do with air. ",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "40",
+        "supplier": "AirFidget"
     },
     {
         "_id": 4,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Sand Fidget",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Fidget_spinners.jpg/1200px-Fidget_spinners.jpg",
+        "description": "Limited edition Sand Fidget capable of spinning over sand and that's it.",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "70",
+        "supplier": "SandFidget"
     },
     {
         "_id": 5,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Avatar Fidget",
+        "img": "https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2017/06/avatar-last-airbender-fidget-spinner-062017.jpg",
+        "description": "Earth, wind, fire, water, spinner—each of the world's elements to be bended responsibly.",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "120",
+        "supplier": "AvatarFidget"
     },
     {
         "_id": 6,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Deathly Hallows Fidget",
+        "img": "https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2017/06/deathly-hallows-fidget-spinner-062017.jpg",
+        "description": "Has the power to annoy adults endlessly and bring constant joy to kids everywhere.",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "600",
+        "supplier": "HarryPotter"
     },
     {
         "_id": 7,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Ironman Fidget",
+        "img": "https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2017/06/iron-man-fidget-spinner-062017.jpg",
+        "description": "Tony Stark would have something to say about all of this involuntary spinning.",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "2",
+        "supplier": "IronmanFidget"
     },
     {
         "_id": 8,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Tie Fighter Fidget",
+        "img": "https://d2rd7etdn93tqb.cloudfront.net/wp-content/uploads/2017/06/tie-fighter-fidget-spinner-062017.jpg",
+        "description": "If this spinner could speak it would say, 'Pew pew!' Fast and agile.",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "40",
+        "supplier": "StarWarsFidget"
     },
     {
         "_id": 9,
-        "name": "Fire Fidget",
-        "img": "https://rukminim2.flixcart.com/image/416/416/j5ws0i80/spin-press-launch-toy/5/s/5/fidget-spinner-fire-pattern-new-in-market-fidbee-original-imaewhz2zggpqc9y.jpeg?q=70",
-        "description": "The color of some product parts may vary from what is shown in the image",
+        "name": "Simple Fidget",
+        "img": "https://m.media-amazon.com/images/I/71rcTHM2OTS._AC_SL1500_.jpg",
+        "description": "Pop Fidget Spinner Toy 2 Pack, Simple Dimple Fidget Spinners Rainbow,Pop Fidget Hand Spinner Sensory Toy for ADHD Anxiety Stress Relief",
         "quantity" : "1",
-        "price": "60",
-        "supplier": "FireFidget"
+        "price": "30",
+        "supplier": "SimpleFidget"
     }
 ]

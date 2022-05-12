@@ -6,7 +6,7 @@ const Inventory = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -18,7 +18,6 @@ const Inventory = () => {
                     <tr className='border-2'>
                         <th className='px-5 border-4'>Product Name</th>
                         <th className='px-5 border-4'>Image</th>
-                        <th className='px-5 border-4'>Description</th>
                         <th className='px-5 border-4'>Price</th>
                         <th className='px-5 border-4'>Qty</th>
                         <th className='px-5 border-4'>Supplier</th>
