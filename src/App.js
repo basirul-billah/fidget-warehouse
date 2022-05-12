@@ -4,10 +4,13 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import ItemDetails from './Components/Item/ItemDetails';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
+import AddItems from './Pages/AddItems/AddItems';
 import Blog from './Pages/Blog/Blog';
 import Home from './Pages/Home/Home';
 import Inventory from './Pages/Inventory/Inventory';
 import LogIn from './Pages/LogIn/LogIn';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import MyItems from './Pages/MyItems/MyItems';
 import NotFound from './Pages/NotFound/NotFound';
 import Register from './Pages/Register/Register';
 
@@ -27,6 +30,21 @@ function App() {
           <Route path='/itemdetails/:itemId' element={
             <RequireAuth>
               <ItemDetails></ItemDetails>
+            </RequireAuth>
+          }></Route>
+          <Route path='/manageinventory' element={
+            <RequireAuth>
+              <ManageInventory></ManageInventory>
+            </RequireAuth>
+          }></Route>
+          <Route path='/additems' element={
+            <RequireAuth>
+              <AddItems></AddItems>
+            </RequireAuth>
+          }></Route>
+          <Route path='/myitems' element={
+            <RequireAuth>
+              <MyItems></MyItems>
             </RequireAuth>
           }></Route>
           <Route path='/blog' element={<Blog></Blog>}></Route>
