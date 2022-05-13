@@ -8,18 +8,18 @@ const InventoryItems = ({ product }) => {
 
     const handleDelete = _id => {
         const confirmDeletion = window.confirm("Are you sure you want to delete this item?");
-        if(confirmDeletion) {
-            const url = `http://localhost:5000/itemdetails/${_id}`;
+        if (confirmDeletion) {
+            const url = `https://serene-ravine-32165.herokuapp.com/itemdetails/${_id}`;
             console.log(url);
             fetch(url, {
                 method: 'DELETE'
             })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                const remaining = products.filter(product => product._id !== _id);
-                setProducts(remaining);
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = products.filter(product => product._id !== _id);
+                    setProducts(remaining);
+                })
         }
     }
 

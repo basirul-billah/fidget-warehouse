@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 const AddItems = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        const url = `http://localhost:5000/products`
+        const url = `https://serene-ravine-32165.herokuapp.com/products`
 
         fetch(url, {
             method: 'POST',

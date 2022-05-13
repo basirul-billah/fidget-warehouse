@@ -6,7 +6,7 @@ const ItemDetails = () => {
     const [item, setItem] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/itemdetails/${itemId}`;
+        const url = `https://serene-ravine-32165.herokuapp.com/itemdetails/${itemId}`;
 
         fetch(url)
             .then(res => res.json())
@@ -60,7 +60,7 @@ const ItemDetails = () => {
                     </div>
                 </div>
             </div>
-            
+
             <Link className='flex justify-center mt-10 ' to='/manageinventory'>
                 <button
                     className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
