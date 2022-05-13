@@ -1,14 +1,26 @@
 import React from 'react';
+import useProducts from '../../hooks/useProducts';
 
 const InventoryItems = ({ product }) => {
-    let { name, img, price, quantity, supplier } = product;
+    const { _id, name, img, price, quantity, supplier } = product;
 
-    const handleDeliverd = () => {
-        let quantityObj = JSON.parse(quantity);
-        if (quantityObj >= 0) {
-            quantityObj--;
+    const [products, setProducts] = useProducts();
+
+    const handleDelete = _id => {
+        const confirmDeletion = window.confirm("Are you sure you want to delete this item?");
+        if(confirmDeletion) {
+            const url = `http://localhost:5000/itemdetails/${_id}`;
+            console.log(url);
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                const remaining = products.filter(product => product._id !== _id);
+                setProducts(remaining);
+            })
         }
-        quantity = JSON.stringify(quantityObj)
     }
 
     return (
@@ -19,16 +31,10 @@ const InventoryItems = ({ product }) => {
             <td className='px-5 border-4'>{quantity}</td>
             <td className='px-5 border-4'>{supplier}</td>
             <td className='px-5 border-4'>
-
                 <button
-                    onClick={handleDeliverd}
-                    className='py-2 px-4 mr-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
-                    Delivered
-                </button>
-
-                <button
+                    onClick={() => handleDelete(_id)}
                     className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
-                    Restock
+                    Delete
                 </button>
             </td>
         </tr>

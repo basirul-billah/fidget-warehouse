@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 
 const AddItems = () => {
     const { register, handleSubmit } = useForm();
@@ -15,6 +16,7 @@ const AddItems = () => {
         })
             .then(res => res.json())
             .then(res => console.log(res))
+        alert("Item added successfully!")
     };
 
     return (
