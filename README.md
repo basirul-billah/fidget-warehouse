@@ -11,8 +11,9 @@ Live site: https://fidget-warehouse.web.app/
 5. Responsive web layout.
 
 ## Technologies 
+* Tailwind CSS
 * ReactJS
 * MongoDB
 * Firebase Authentication
 * Firebase Hosting
-* Heroko
+* Heroku
