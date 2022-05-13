@@ -20,7 +20,7 @@ const AddItems = () => {
     };
 
     return (
-        <div className='card bg-[#15263F] w-2/5 h-[40rem] rounded-xl p-6 mx-auto mb-5'>
+        <div className='card bg-[#15263F] lg:w-2/5 h-[40rem] rounded-xl p-6 lg:mx-auto mx-2 mb-5'>
             <h1 className='text-4xl font-bold my-4 text-white'>Add Item</h1>
             <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                 <input className='my-3 p-3 w-full rounded-md bg-white' placeholder='Product Name' {...register("name", { required: true })} />

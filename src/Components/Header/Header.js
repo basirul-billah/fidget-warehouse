@@ -27,7 +27,6 @@ const Header = () => {
                     </div>
                     <div className="lg:flex flex-grow items-center">
                         <ul className="flex flex-col lg:flex-row list-none ml-auto">
-
                             {
                                 user && <>
                                     <li className="nav-item">

@@ -13,13 +13,17 @@ const ItemDetails = () => {
             .then(data => setItem(data));
     }, [])
 
-    const handleDeliverd = e => {
-
+    const handleDeliverd = _id => {
+        let deliverd = item.quantity;
+        deliverd--;
+        item.quantity = deliverd;
+        setItem(item._id);
     }
 
-    const handleRestock = e => {
+    const handleRestock = _id => {
         let restockQuantity = prompt('Enter quantity');
-        console.log(restockQuantity);
+        item.quantity = restockQuantity;
+        setItem(item._id);
     }
 
     return (
@@ -37,19 +41,19 @@ const ItemDetails = () => {
                     </div>
                     <div className="flex items-center">
                         <div>
-                            <p className="text-gray-900 leading-none">Price: ${item.price} USD</p>
-                            <p className="text-gray-900 leading-none">Supplier: {item.supplier}</p>
-                            <p className="text-gray-900 leading-none">Quantity: {item.quantity}</p>
+                            <p className="text-gray-900 leading-none mb-2">Price: ${item.price} USD</p>
+                            <p className="text-gray-900 leading-none mb-2">Supplier: {item.supplier}</p>
+                            <p className="text-gray-900 leading-none mb-2">Quantity: {item.quantity}</p>
 
                             <button
-                                onClick={handleDeliverd}
-                                className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
+                                onClick={() => handleDeliverd(item._id)}
+                                className='py-2 px-4 m-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
                                 Delivered
                             </button>
 
                             <button
-                                onClick={handleRestock}
-                                className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
+                                onClick={() => handleRestock(item._id)}
+                                className='py-2 px-4 m-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
                                 Restock
                             </button>
                         </div>
@@ -57,7 +61,7 @@ const ItemDetails = () => {
                 </div>
             </div>
             
-            <Link className='flex justify-center mt-10' to='/manageinventory'>
+            <Link className='flex justify-center mt-10 ' to='/manageinventory'>
                 <button
                     className='py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75'>
                     Manage Inventory
